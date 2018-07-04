@@ -1,0 +1,22 @@
+@model RequestIntercessor.Models.MirrorView;
+
+<html>
+    <body>
+        <table>
+            <tr>
+                <td>Url</td><td>@Model.Url</td>
+            </tr>
+            @foreach(var h  in Model.Headers){
+                <tr>
+                    <td>@h.Key</td><td>@h.Value</td>
+                </tr>
+            }
+
+
+
+            <tr>
+                <td>body</td><td>@Model.Body</td>
+            </tr>
+        </table>
+    </body>
+</html>
